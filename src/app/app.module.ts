@@ -9,6 +9,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PertolonganPertamaComponent } from './pertolongan-pertama/pertolongan-pertama.component';
+import { CartService } from './cart.service';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,7 @@ import { PertolonganPertamaComponent } from './pertolongan-pertama/pertolongan-p
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'tolong_dong', component: PertolonganPertamaComponent },
+      
     ])
   ],
   declarations: [
@@ -26,9 +29,11 @@ import { PertolonganPertamaComponent } from './pertolongan-pertama/pertolongan-p
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    PertolonganPertamaComponent
+    PertolonganPertamaComponent,
+    CartComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [CartService]
 })
 export class AppModule { }
 
