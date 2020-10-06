@@ -11,6 +11,7 @@ export class ProductAlertsComponent implements OnInit {
 
   @Input() product;
   @Output() notify = new EventEmitter();
+  @Output() kestau = new EventEmitter();
 
   constructor() { }
 
